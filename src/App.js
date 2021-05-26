@@ -6,22 +6,25 @@ import {About} from './About';
 import {Contact} from './Contact';
 import {Projects} from './Projects';
 import {NoMatch} from './NoMatch';
+import {Layout} from './components/Layout';
 
 class App extends Component {
   render() {
       return (
     <React.Fragment>
+      <Layout>
       <Router>
         <Switch>
           <Route exact path = "/" component = {Home}/>
-          <Route  path = "/About Me" component = {About}/>
+          <Route  path = "/about" component = {About}/>
           <Route  path = "/contact" component = {Contact}/>
-          <Route  path = "/Projects" component = {Projects}/>
+          <Route  path = "/projects" component = {Projects}/>
           <Route component = {NoMatch}/>
 
           
         </Switch>
       </Router>
+      </Layout>
     </React.Fragment>
   );
 }
